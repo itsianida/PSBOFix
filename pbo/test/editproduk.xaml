@@ -1,0 +1,26 @@
+﻿<Window x:Class="test.editproduk"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test"
+        mc:Ignorable="d" Height="475.325" Width="414.935" WindowStartupLocation="CenterScreen">
+    <Grid x:Name="EditProduk">
+        <Rectangle Fill="#FFBBBBBB" HorizontalAlignment="Left" Height="445" Margin="0,-1,0,0" Stroke="#FFBBBBBB" VerticalAlignment="Top" Width="407"/>
+        <Button x:Name="save" Content="Save" HorizontalAlignment="Left" Margin="39,387,0,0" VerticalAlignment="Top" Width="114" Background="#FF3D1A55" Foreground="White" BorderBrush="#FF3D1A55" Height="28" Click="SaveEditProd_Click"/>
+        <Rectangle Fill="#FF3D1A55" HorizontalAlignment="Left" Height="47" Stroke="#FF3D1A55" VerticalAlignment="Top" Width="407" Margin="0,-1,0,0"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontFamily="Cabin" FontSize="19" Width="143" Height="26"><Run Text="Edit"/><Run Text=" Produk"/></TextBlock>
+        <TextBox x:Name="id_box" HorizontalAlignment="Left" Height="22" Margin="148,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" FontSize="13" Text="{Binding IdProduk, Mode=TwoWay}"/>
+        <TextBox x:Name="namprod_box" HorizontalAlignment="Left" Height="22" Margin="148,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" FontSize="13" Text="{Binding NamaBarang, Mode=TwoWay}"/>
+        <TextBox x:Name="kate" HorizontalAlignment="Left" Height="23" Margin="148,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" FontFamily="Cabin" FontSize="13" Text="{Binding Kategori, Mode=TwoWay}"/>
+        <TextBox x:Name="jum_box" HorizontalAlignment="Left" Height="23" Margin="148,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" FontFamily="Cabin" FontSize="13" Text="{Binding JumlahBarang, Mode=TwoWay}" PreviewTextInput="jum_PreviewTextInput"/>
+        <TextBox x:Name="harga_box" HorizontalAlignment="Left" Height="23" Margin="148,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" FontFamily="Cabin" FontSize="13" Text="{Binding HargaBarang, Mode=TwoWay}" PreviewTextInput="harga_PreviewTextInput"/>
+        <TextBlock x:Name="id_label" HorizontalAlignment="Left" Margin="27,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Cabin" FontSize="15" RenderTransformOrigin="0.557,1" Width="103" Height="15"><Run Text="ID "/><Run Text="p"/><Run Text="roduk"/></TextBlock>
+        <TextBlock x:Name="harga_label" HorizontalAlignment="Left" Margin="27,318,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Cabin" FontSize="15" RenderTransformOrigin="0.557,1" Width="103" Height="15" Text="Harga (RP)"/>
+        <TextBlock x:Name="prod_label" HorizontalAlignment="Left" Margin="27,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Cabin" FontSize="15" RenderTransformOrigin="0.557,1" Width="103" Height="15" Text="Nama produk"/>
+        <TextBlock x:Name="kate_label" HorizontalAlignment="Left" Margin="27,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Cabin" FontSize="15" RenderTransformOrigin="0.557,1" Width="103" Height="15" Text="Kategori"/>
+        <TextBlock x:Name="jum_label" HorizontalAlignment="Left" Margin="27,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Cabin" FontSize="15" RenderTransformOrigin="0.557,1" Width="103" Height="15" Text="Jumlah"/>
+        <Button x:Name="save_button_Copy" Content="Cancel" HorizontalAlignment="Left" Margin="251,389,0,0" VerticalAlignment="Top" Width="116" Background="#FF3D1A55" Foreground="White" BorderBrush="#FF3D1A55" Height="28" Click="cancelbaredit_Click"/>
+
+    </Grid>
+</Window>

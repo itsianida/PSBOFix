@@ -1,0 +1,122 @@
+﻿<Window x:Class="test.menuadmin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+        mc:Ignorable="d" Height="505.5" Width="861.7" Background="#FFCFCFCF" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220*"/>
+            <ColumnDefinition Width="464*"/>
+            <ColumnDefinition Width="171*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="max" HorizontalAlignment="Left" Margin="57,-26,0,0" VerticalAlignment="Top" Width="28" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Column="2" />
+        <DockPanel HorizontalAlignment="Left" Height="75" LastChildFill="False" VerticalAlignment="Top" Width="855" Background="#FF3D1A55" Margin="-1,0,0,0" Grid.ColumnSpan="3"/>
+        <TextBlock x:Name="NamaAplikasi" HorizontalAlignment="Left" Margin="25,6,0,0" TextWrapping="Wrap" Text="Point of Sale" VerticalAlignment="Top" Foreground="#FFFFDC45" Height="40" Width="195" FontSize="26" FontFamily="Alegreya Sans" Grid.ColumnSpan="2"/>
+        <Button x:Name="logout" HorizontalAlignment="Left" Margin="47,12,0,0" VerticalAlignment="Top" Width="89" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" RenderTransformOrigin="0.483,0.787" Content="Logout" FontFamily="Cabin" HorizontalContentAlignment="Right" Click="logout_Click" Grid.Column="2"/>
+
+        <TabControl x:Name="tabControl1" Height="402" Margin="0,51,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" IsTabStop="True" TabIndex="0" Grid.IsSharedSizeScope="True" Grid.ColumnSpan="3">
+            <TabItem x:Name="Home" Header="Home" Margin="-5,-3,-48,1" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF060000" FontSize="14" TabIndex="1">
+                <Grid Background="#FFCFCFCF" Margin="0,-4,-2,-29">
+                    <TextBlock x:Name="welcome" HorizontalAlignment="Left" Margin="13,21,0,0" TextWrapping="Wrap" Text="SELAMAT DATANG ADMIN" VerticalAlignment="Top" Height="25" Width="236" FontFamily="Cabin" FontSize="18.667" Foreground="#FF3D1A55" Grid.Column="1"/>
+                    <TextBlock x:Name="tanggal" HorizontalAlignment="Left" Margin="13,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Cabin" Foreground="#FF898989" Grid.Column="1" Height="17" Width="160" Text="{Binding Source={x:Static sys:DateTime.Today},StringFormat='{}{0:dddd, MMMM dd, yyyy}'}" FontSize="15"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem x:Name="Laporan" Header="Laporan" Margin="0,-3,-47.664,0.668" HorizontalAlignment="Right" Width="121" Background="#FF3D1A55" BorderBrush="#FF3D1A55" Foreground="Black" UseLayoutRounding="False" FontSize="14" TabIndex="2">
+                <Grid Background="#FFCFCFCF" Margin="0,-3,0,-28">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="47*"/>
+                        <ColumnDefinition Width="801*"/>
+                    </Grid.ColumnDefinitions>
+                    <Viewbox Margin="363,306,388,14" Grid.Column="1">
+                        <Canvas Width="24" Height="24"/>
+                    </Viewbox>
+                    <Viewbox Margin="363,306,388,14" Grid.Column="1"/>
+                    <Viewbox Margin="363,306,388,14" Grid.Column="1"/>
+                    <Viewbox Margin="363,306,388,14" Grid.Column="1"/>
+                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Margin="10,102,0,36" Width="821" Focusable="True" Grid.ColumnSpan="2"/>
+                    <TextBlock x:Name="tampilberdsrkn" HorizontalAlignment="Left" Margin="25,16,0,0" TextWrapping="Wrap" Text="Tampilkan berdasarkan" VerticalAlignment="Top" FontFamily="Cabin" FontSize="13.333" RenderTransformOrigin="2.206,0.737" Height="17" Width="148" Grid.ColumnSpan="2"/>
+                    <Rectangle HorizontalAlignment="Left" Height="59" Margin="10,33,0,0" Stroke="#FF706F6F" VerticalAlignment="Top" Width="821" Grid.ColumnSpan="2"/>
+                    <Button x:Name="filter" Content="Tampilkan" HorizontalAlignment="Right" Margin="0,46,56,0" VerticalAlignment="Top" Width="82" Background="#FF84FF70" BorderBrush="#FF84FF70" Height="24" Grid.Column="1"/>
+                    <ComboBox x:Name="bulan" HorizontalAlignment="Left" Margin="88,37,0,0" VerticalAlignment="Top" Width="132" Height="26" Grid.Column="1"/>
+                    <ComboBox x:Name="tahun" HorizontalAlignment="Left" Margin="406,37,0,0" VerticalAlignment="Top" Width="79" Height="26" Grid.Column="1"/>
+                    <TextBlock x:Name="bln" HorizontalAlignment="Left" Margin="44,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="65" Grid.ColumnSpan="2"><Run Text="Bulan"/><Run Text="&#x9;:"/></TextBlock>
+                    <TextBlock x:Name="thn" HorizontalAlignment="Left" Margin="300,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="65" Grid.Column="1"><Run Text="Tahun"/><Run Text="&#x9;:"/></TextBlock>
+                    <Button x:Name="hari" Content="Tampilkan laporan hari ini" HorizontalAlignment="Left" Margin="42,68,0,0" VerticalAlignment="Top" Width="162" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Cabin" Foreground="#FF3D1A55" Height="23" Grid.ColumnSpan="2"/>
+
+                </Grid>
+            </TabItem>
+
+            <TabItem x:Name="Dafpeg" Header="Daftar Pegawai" Margin="48,-3,-100,1" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="14" TabIndex="3" >
+                <Grid Background="#FFCFCFCF" Margin="0,-3,0,-28">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="0*"/>
+                    </Grid.ColumnDefinitions>
+                    <Viewbox Margin="362,212,9,61"/>
+                    <Viewbox Margin="362,212,9,61"/>
+                    <Viewbox Margin="362,212,9,61"/>
+                    <Button x:Name="tampeg" Content="Tambah" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Width="91" Background="#FF84FF70" BorderBrush="#FF84FF70" FontSize="10.667" FontFamily="Cabin" Height="24" Click="tampeg_Click"/>
+                    <Button x:Name="hapuspeg" Content="Hapus" HorizontalAlignment="Left" Margin="135,10,0,0" VerticalAlignment="Top" Width="92" FontSize="10.667" BorderBrush="#FFFF3939" Background="#FFFF3939" FontFamily="Cabin" Height="24" Click="hapeg_Click"/>
+                    <DataGrid x:Name="dataGrid" CanUserResizeColumns="False" CanUserResizeRows="False" Margin="15,43,0,0" VerticalAlignment="Top" Height="325" IsSynchronizedWithCurrentItem="True" AutoGenerateColumns="False" RowEditEnding="dg_RowEditEnding" SelectionChanged="dataGrid_SelectionChanged" HorizontalAlignment="Left" Width="805">
+                        <DataGrid.Columns >
+                            <DataGridCheckBoxColumn Header="Delete"/>
+                            <DataGridTextColumn Header="No"  Width="30" IsReadOnly="True" Binding="{Binding IdPegawai, Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="Nama Lengkap" Width="120" IsReadOnly="True" Binding="{Binding NamaLengkap, Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="Tanggal Lahir" Width="100" IsReadOnly="True" Binding="{Binding TanggalLahir, Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="Alamat Rumah" Width="110" IsReadOnly="True" Binding="{Binding AlamatRumah, Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="No HP" Width="80" IsReadOnly="True" Binding="{Binding NoHp, Mode=TwoWay}" />
+                            <DataGridTextColumn Header="No. Pegawai" Width="110" IsReadOnly="True" Binding="{Binding NoPegawai, Mode=TwoWay}" />
+                            <DataGridTextColumn Header="Username" Width="80" IsReadOnly="True" Binding="{Binding Username, Mode=TwoWay}" />
+                            <DataGridTextColumn Header="Password" Width="70" IsReadOnly="True" Binding="{Binding Password, Mode=TwoWay}" />
+                            <DataGridTemplateColumn Width="40" Header="Edit">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Edit" Click="editpegawai_Click"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+
+            <TabItem x:Name="Daftar" Header="Daftar Barang" Margin="0,-2,-99,1" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="14" TabIndex="4" HorizontalAlignment="Right" Width="132">
+                <Grid Background="#FFCFCFCF" Margin="0,-3,0,-28">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="439*"/>
+                        <ColumnDefinition Width="410*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="tambah" Content="Tambah" HorizontalAlignment="Left" Margin="14,17,0,0" VerticalAlignment="Top" Width="90" FontSize="10.667" Background="#FF84FF70" BorderBrush="#FF84FF70" Height="24" Click="tambahbarang_Click"/>
+                    <Button x:Name="hapusbar" Content="Hapus" HorizontalAlignment="Left" Margin="132,17,0,0" VerticalAlignment="Top" Width="92" FontSize="10.667" BorderBrush="#FFFF3939" Background="#FFFF3939" FontFamily="Cabin" Height="24" Click="hapusbarang_Click"/>
+                    <Button x:Name="hapusbar_Copy" Content="Unduh" HorizontalAlignment="Left" Margin="258,17,0,0" VerticalAlignment="Top" Width="92" FontSize="10.667" BorderBrush="#FF6AC1F3" Background="#FF6AC1F3" FontFamily="Cabin" Height="24"/>
+                    <DataGrid x:Name="dgbarang" CanUserResizeColumns="False" CanUserResizeRows="False" AutoGenerateColumns="False" IsSynchronizedWithCurrentItem="True" HorizontalAlignment="Left" Margin="14,65,0,0" VerticalAlignment="Top" Height="307" Width="812" Grid.ColumnSpan="2" SelectionChanged="dgbarang_SelectionnChanged" RowEditEnding="datag_RowEditEnding">
+                        <DataGrid.Columns>
+                            <DataGridCheckBoxColumn Header="Delete"/>
+                            <DataGridTextColumn Header="No" IsReadOnly="True" Binding="{Binding IdBarang, Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="ID Produk" Width="70" IsReadOnly="True" Binding="{Binding IdProduk, Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="Nama Barang" Width="180" IsReadOnly="True" Binding="{Binding NamaBarang, Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="Jumlah Barang" Width="100" IsReadOnly="True" Binding="{Binding JumlahBarang, Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="Harga Barang" Width="100" IsReadOnly="True" Binding="{Binding HargaBarang, Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="Kategori" Width="190" IsReadOnly="True" Binding="{Binding Kategori, Mode=TwoWay}"/>
+                            <DataGridTemplateColumn Header="Edit" Width="70">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Edit" Click="editbarang_Click"></Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBox x:Name="caribar" Grid.Column="1" HorizontalAlignment="Left"  Height="24" Margin="174,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Background="White" TextChanged="barang_TextChanged"/>
+                    <Label x:Name="label" Content="Search" Grid.Column="1" HorizontalAlignment="Left" Margin="124,13,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

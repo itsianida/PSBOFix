@@ -1,0 +1,28 @@
+﻿<Window x:Class="test.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Height="788.351" Width="1374.922" Background="#FFCFCFCF">
+    <Grid>
+        <Rectangle Fill="#FF3D1A55" HorizontalAlignment="Left" Height="82" Stroke="#FF3D1A55" VerticalAlignment="Top" Width="500" Margin="852,68,-757,0"/>
+        <TextBlock x:Name="txt_op" HorizontalAlignment="Left" Margin="18,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="cabin" FontSize="18.667"><Run Text="Operator&#x9;"/><Run Text="&#x9;"/><Run Text=":"/></TextBlock>
+        <TextBlock x:Name="txt_jam" HorizontalAlignment="Left" Margin="18,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="cabin" FontSize="18.667"><Run Text="Jam&#x9;"/><Run Text="&#x9;"/><Run Text=":"/></TextBlock>
+        <TextBlock x:Name="txt_trans" HorizontalAlignment="Left" Margin="18,104,0,0" TextWrapping="Wrap" Text="Nomor Transaksi&#x9;:" VerticalAlignment="Top" FontFamily="cabin" FontSize="18.667"/>
+        <TextBlock x:Name="txt_tanggal" HorizontalAlignment="Left" Margin="18,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="cabin" FontSize="18.667"><Run Text="Tanggal"/><Run Text="&#x9;"/><Run Text="&#x9;:"/></TextBlock>
+        <Label x:Name="label_bayar" Content="Bayar&#x9;:" HorizontalAlignment="Left" Margin="738,158,-260,0" VerticalAlignment="Top" FontFamily="Cabin" FontSize="21.333" FontWeight="Bold" Width="117"/>
+        <TextBox x:Name="bayar_box" HorizontalAlignment="Left" Height="36" Margin="852,158,-757,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" BorderBrush="#FF3D1A55" SelectionBrush="#FF3D1A55" FontFamily="Cabin" FontSize="48" TextAlignment="Right"/>
+        <Button x:Name="button_cari" Content="Cari Produk" HorizontalAlignment="Left" Margin="12,684,0,-420" VerticalAlignment="Top" Width="142" Height="29" FontFamily="Cabin" FontSize="18.667" Background="#FF3D1A55" Foreground="White"/>
+        <Button x:Name="button_hapus" Content="Hapus Item" HorizontalAlignment="Left" Margin="173,684,0,-420" VerticalAlignment="Top" Width="142" Height="29" FontFamily="Cabin" FontSize="18.667" Background="#FF3D1A55" Foreground="White"/>
+        <Label x:Name="label_total" Content="Total&#x9;:" HorizontalAlignment="Left" Margin="735,71,-257,0" VerticalAlignment="Top" FontFamily="Cabin" FontSize="21.333" FontWeight="Bold" Width="117"/>
+        <Button x:Name="button" Content="Cetak" HorizontalAlignment="Left" Margin="1190,708,-752,-457" VerticalAlignment="Top" Width="157" Height="42" Background="#FFFFDC45" BorderBrush="#FFFFDC45" FontFamily="Cabin" FontSize="21.333" FontWeight="Bold"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="347" Width="1366" Margin="0,230,-771,-284"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="53" Margin="10,588,-401,-348" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="986"/>
+        <TextBlock x:Name="mainlabel3" HorizontalAlignment="Left" Margin="13,30,0,0" TextWrapping="Wrap" Text="Point of Sale" VerticalAlignment="Top" Foreground="#FF3D1A55" Height="67" Width="353" FontSize="64" FontFamily="Alegreya Sans"/>
+        <TextBlock x:Name="tanggal" HorizontalAlignment="Left" Margin="180,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Cabin" Foreground="Black" Height="18" Width="208" Text="{Binding Source={x:Static sys:DateTime.Today},StringFormat='{}{0:dddd, MMMM dd, yyyy}'}" FontSize="17"/>
+
+    </Grid>
+</Window>
